@@ -19,11 +19,55 @@ tensorflow or publicly available method for a quantum dropout. We will be
 looking at the below papers to see if we could improve the MNIST dataset
 training.
 
+### Questions to answer:
+
+What is dropout? How can it be translated to quantum applications?
+
+Can we determine if this will help quantum machine learning? If so how?
+
+What would the architecture be for the "best" quantum machine learning dropout?
+
+Bonus: How can we stand out among the current research?
+
 ## Implementation
 
 ### Version 1 inspired by Schuld et al.
 
+The approach that often helps is a simpledropout regu-larizationthat is both
+quantum-inspired and quantumready (in the sense that it is easy in both
+classicalsimulation and quantum execution). The essence of theapproach is to
+randomly select and measure one of thequbits, and set it aside for a certain
+numberNdropoutof parameter update epochs. After that, the qubit isre-added to
+the circuit and another qubit (or, perhaps,no qubit) is randomly dropped. This
+strategy works by“smoothing” the model fit and it generally inflates thetraining
+error, but often deflates the generalization error.
+
 ### Version 2 inspired by Verdon et al.
+
+As our parameters naturally have Gaussian noise inboth the gradient and
+parameter value due to our opti-mization approach outlined in Section III using
+Gaussianpointer state, the Gaussian multiplicative noise dropoutcomes for free
+for our schemes. In a sense the Quantumuncertainty of the wavefunction serves as
+natural regu-larizing noise. For Gaussian additive noise dropout, re-fer to
+Section V where we describe quantum parametriccircuits for neural networks. In
+this section, the com-putational registers are initialized in null-position
+qu-dit or qumode eigenstates|0〉. It would be straightfor-ward to use
+computational registers which have someadded Gaussian noise to their position
+value, i.e., arein a simulated squeezed state rather than a perfect posi-tion
+eigenstate initially. Because these types of dropoutare straightforward to
+implement with our schemes, wefocus onoperation dropout: stochastically removing
+cer-tain subsets of parametric operations.
+
+35The goal of operation dropout is to probabilisticallycreate a blockage of
+information flow in the feedforwardcomputational graph. Furthermore, another
+importantaspect of dropout is the ability to backpropagate errorswith knowledge
+of this erasure error. As our backprop-agation approach relies on the ability to
+backpropagateerror signals through the quantum computational graphvia
+uncomputation after the feedforward operation andphase kick, we will need to
+keep in memory the registerwhich controls the erasure. We use a quantum
+state’scomputational basis statistics as the source of classicalstochasticity in
+this section for notational convenience,but note that could equivalently replace
+these qubits withclassical random Bernoulli variables of equivalent statis-tics.
 
 ### Version 3 our method after analysis.
 
