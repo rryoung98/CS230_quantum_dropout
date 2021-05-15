@@ -61,7 +61,8 @@ def dropout_v2(circuit, rate, noise_shape=None, seed=None, name=None):
 
     - The position at which we apply the dropout and it's effects on a quantum ML layer.
     - We are doing the shuld approach here, but how can we learn from verdon?
-    - 
+    - What uniquely quantum applications / advnatages/ disadvantages of drop out are there/
+    - Does the quantum architecture influence the ability for a successful dropout?
 
     Our first parameter circuit will be the cirq circuit that we need to manipulate and add the
     measurement (our some other method). 
