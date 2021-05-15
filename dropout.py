@@ -83,5 +83,6 @@ def dropout_v2(circuit, rate, noise_shape=None, seed=None, name=None):
     where *target is the qubit we want to measure. 
     - The above circuit and appending it requires to be changed at every epoch. (we need
     to measure different qubits to successfully apply regulariztion during the training 
-    session)
+    session). This implies that we will have to make sure that every epoch that we unittest 
+    our implementation.
     """
