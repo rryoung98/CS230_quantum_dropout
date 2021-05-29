@@ -1,7 +1,4 @@
 absl-py==0.12.0
-amazon-braket-default-simulator==1.1.1.post2
-amazon-braket-schemas==1.1.4
-amazon-braket-sdk==1.5.16
 antlr4-python3-runtime==4.9.2
 appdirs==1.4.4
 appnope==0.1.2
@@ -117,7 +114,6 @@ pycparser==2.20
 pydantic==1.8.2
 Pygments==2.7.1
 pyparsing==2.4.7
-pyquil==1.9.0
 pyrsistent==0.17.3
 PySocks==1.7.1
 pytest==6.2.4
@@ -126,13 +122,6 @@ python-constraint==1.4.0
 python-dateutil==2.8.1
 pytz==2020.1
 pyzmq==22.0.3
-qiskit==0.26.2
-qiskit-aer==0.8.2
-qiskit-aqua==0.9.1
-qiskit-ibmq-provider==0.13.1
-qiskit-ignis==0.6.0
-qiskit-terra==0.17.4
-qtconsole==5.1.0
 QtPy==1.9.0
 Quandl==3.5.3
 regex==2020.7.14
