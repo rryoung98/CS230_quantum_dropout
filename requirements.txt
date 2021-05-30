@@ -32,7 +32,6 @@ deprecation==2.1.0
 dill==0.3.2
 distlib==0.3.0
 dlx==1.0.4
-docplex==2.15.194
 entrypoints==0.3
 fastdtw==0.3.4
 fastjsonschema==2.14.5
