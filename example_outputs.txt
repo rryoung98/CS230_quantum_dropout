@@ -1,0 +1,28 @@
+Note that this doesn't happen all the time, but we have obtained such results many times!
+
+Non-dropout training set perf:
+16/16 [==============================] - 3s 204ms/step - loss: 0.3844 - hinge_accuracy: 0.8508
+Non-dropout test set perf:
+62/62 [==============================] - 13s 204ms/step - loss: 0.6170 - hinge_accuracy: 0.7440
+
+
+Dropout training set perf:
+16/16 [==============================] - 4s 225ms/step - loss: 0.6824 - hinge_accuracy: 0.7969
+Dropout test set perf:
+62/62 [==============================] - 14s 222ms/step - loss: 0.8585 - hinge_accuracy: 0.7293
+
+
+
+
+
+
+Non-dropout training set perf:
+16/16 [==============================] - 5s 294ms/step - loss: 0.3206 - hinge_accuracy: 0.8676
+Non-dropout test set perf:
+62/62 [==============================] - 14s 227ms/step - loss: 0.6501 - hinge_accuracy: 0.7107
+
+
+Dropout training set perf:
+16/16 [==============================] - 4s 272ms/step - loss: 0.6980 - hinge_accuracy: 0.8543
+Dropout test set perf:
+62/62 [==============================] - 14s 226ms/step - loss: 0.8170 - hinge_accuracy: 0.7812
