@@ -1,15 +1,12 @@
-Note that this doesn't happen all the time, but we have obtained such results many times!
-
-Non-dropout training set perf:
-16/16 [==============================] - 3s 204ms/step - loss: 0.3844 - hinge_accuracy: 0.8508
-Non-dropout test set perf:
-62/62 [==============================] - 13s 204ms/step - loss: 0.6170 - hinge_accuracy: 0.7440
 
 
-Dropout training set perf:
-16/16 [==============================] - 4s 225ms/step - loss: 0.6824 - hinge_accuracy: 0.7969
-Dropout test set perf:
-62/62 [==============================] - 14s 222ms/step - loss: 0.8585 - hinge_accuracy: 0.7293
+Dropout Training set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1100 - hinge_accuracy: 0.9860
+Dropout Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1207 - hinge_accuracy: 0.9880
+
+
+
 
 
 
@@ -17,12 +14,250 @@ Dropout test set perf:
 
 
 Non-dropout training set perf:
-16/16 [==============================] - 5s 294ms/step - loss: 0.3206 - hinge_accuracy: 0.8676
+500/500 [==============================] - 5s 9ms/step - loss: 0.0689 - hinge_accuracy: 0.9920
 Non-dropout test set perf:
-62/62 [==============================] - 14s 227ms/step - loss: 0.6501 - hinge_accuracy: 0.7107
+500/500 [==============================] - 5s 10ms/step - loss: 0.0875 - hinge_accuracy: 0.9860
 
 
 Dropout training set perf:
-16/16 [==============================] - 4s 272ms/step - loss: 0.6980 - hinge_accuracy: 0.8543
+500/500 [==============================] - 5s 9ms/step - loss: 0.0830 - hinge_accuracy: 0.9900
 Dropout test set perf:
-62/62 [==============================] - 14s 226ms/step - loss: 0.8170 - hinge_accuracy: 0.7812
+500/500 [==============================] - 5s 10ms/step - loss: 0.1017 - hinge_accuracy: 0.9900
+
+
+
+
+
+
+
+Non-dropout training set perf:
+500/500 [==============================] - 9s 19ms/step - loss: 0.1004 - hinge_accuracy: 0.9820
+Non-dropout test set perf:
+500/500 [==============================] - 8s 17ms/step - loss: 0.1528 - hinge_accuracy: 0.9720
+
+Dropout training set perf:
+500/500 [==============================] - 5s 9ms/step - loss: 0.0550 - hinge_accuracy: 0.9880
+Dropout test set perf:
+500/500 [==============================] - 4s 9ms/step - loss: 0.0682 - hinge_accuracy: 0.9880
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A couple of example dropout runs:
+
+
+Iteration  0
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 14s 28ms/step - loss: 0.9056 - hinge_accuracy: 0.7248
+Training set perf:
+500/500 [==============================] - 5s 9ms/step - loss: 0.5866 - hinge_accuracy: 0.7000
+Test set perf:
+500/500 [==============================] - 5s 9ms/step - loss: 1.1423 - hinge_accuracy: 0.3000
+
+Iteration  1
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 14s 28ms/step - loss: 0.4858 - hinge_accuracy: 0.7321
+Training set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.4707 - hinge_accuracy: 0.7000
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 1.0134 - hinge_accuracy: 0.3000
+
+Iteration  2
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 15s 29ms/step - loss: 0.4070 - hinge_accuracy: 0.7353
+Training set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.3816 - hinge_accuracy: 0.8180
+Test set perf:
+500/500 [==============================] - 6s 11ms/step - loss: 0.7764 - hinge_accuracy: 0.5400
+
+Iteration  3
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 15s 28ms/step - loss: 0.3268 - hinge_accuracy: 0.8446
+Training set perf:
+500/500 [==============================] - 6s 11ms/step - loss: 0.2840 - hinge_accuracy: 0.9620
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.5159 - hinge_accuracy: 0.9240
+
+Iteration  4
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 15s 29ms/step - loss: 0.2486 - hinge_accuracy: 0.9604
+Training set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1995 - hinge_accuracy: 0.9820
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.3213 - hinge_accuracy: 0.9660
+
+Iteration  5
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 15s 29ms/step - loss: 0.1797 - hinge_accuracy: 0.9744
+Training set perf:
+500/500 [==============================] - 19s 38ms/step - loss: 0.1419 - hinge_accuracy: 0.9820
+Test set perf:
+500/500 [==============================] - 11s 22ms/step - loss: 0.1936 - hinge_accuracy: 0.9840
+
+Iteration  6
+Built model, going to drop out qubit id  1
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 35s 69ms/step - loss: 0.2295 - hinge_accuracy: 0.9695
+Training set perf:
+500/500 [==============================] - 11s 21ms/step - loss: 0.1443 - hinge_accuracy: 0.9780
+Test set perf:
+500/500 [==============================] - 10s 19ms/step - loss: 0.1941 - hinge_accuracy: 0.9740
+
+Iteration  7
+Built model, going to drop out qubit id  1
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 36s 70ms/step - loss: 0.1271 - hinge_accuracy: 0.9852
+Training set perf:
+500/500 [==============================] - 10s 20ms/step - loss: 0.1051 - hinge_accuracy: 0.9800
+Test set perf:
+500/500 [==============================] - 9s 19ms/step - loss: 0.1245 - hinge_accuracy: 0.9880
+
+Iteration  8
+Built model, going to drop out qubit id  1
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 34s 67ms/step - loss: 0.0962 - hinge_accuracy: 0.9838
+Training set perf:
+500/500 [==============================] - 9s 17ms/step - loss: 0.0890 - hinge_accuracy: 0.9880
+Test set perf:
+500/500 [==============================] - 6s 12ms/step - loss: 0.0925 - hinge_accuracy: 0.9900
+
+Iteration  9
+Built model, going to drop out qubit id  7
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 15s 30ms/step - loss: 0.1677 - hinge_accuracy: 0.9715
+Training set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1100 - hinge_accuracy: 0.9860
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1207 - hinge_accuracy: 0.9880
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iteration  0
+Built model, going to drop out qubit id  6
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 33s 65ms/step - loss: 0.8411 - hinge_accuracy: 0.7038
+Training set perf:
+500/500 [==============================] - 9s 18ms/step - loss: 0.4905 - hinge_accuracy: 0.7020
+Test set perf:
+500/500 [==============================] - 9s 18ms/step - loss: 1.0158 - hinge_accuracy: 0.3060
+
+Iteration  1
+Built model, going to drop out qubit id  6
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 33s 66ms/step - loss: 0.3830 - hinge_accuracy: 0.7804
+Training set perf:
+500/500 [==============================] - 9s 18ms/step - loss: 0.2833 - hinge_accuracy: 0.9500
+Test set perf:
+500/500 [==============================] - 9s 18ms/step - loss: 0.5019 - hinge_accuracy: 0.9020
+
+Iteration  2
+Built model, going to drop out qubit id  6
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 27s 54ms/step - loss: 0.2490 - hinge_accuracy: 0.9415
+Training set perf:
+500/500 [==============================] - 6s 12ms/step - loss: 0.1956 - hinge_accuracy: 0.9680
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.2712 - hinge_accuracy: 0.9620
+
+Iteration  3
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 14s 28ms/step - loss: 0.2264 - hinge_accuracy: 0.9768
+Training set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1528 - hinge_accuracy: 0.9760
+Test set perf:
+500/500 [==============================] - 4s 9ms/step - loss: 0.2114 - hinge_accuracy: 0.9660
+
+Iteration  4
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 14s 28ms/step - loss: 0.1492 - hinge_accuracy: 0.9751
+Training set perf:
+500/500 [==============================] - 5s 9ms/step - loss: 0.1156 - hinge_accuracy: 0.9840
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1713 - hinge_accuracy: 0.9680
+
+Iteration  5
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 14s 28ms/step - loss: 0.1117 - hinge_accuracy: 0.9793
+Training set perf:
+500/500 [==============================] - 5s 9ms/step - loss: 0.0906 - hinge_accuracy: 0.9900
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1255 - hinge_accuracy: 0.9800
+
+Iteration  6
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 15s 28ms/step - loss: 0.0877 - hinge_accuracy: 0.9938
+Training set perf:
+500/500 [==============================] - 5s 9ms/step - loss: 0.0707 - hinge_accuracy: 0.9900
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.1135 - hinge_accuracy: 0.9840
+
+Iteration  7
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 29s 57ms/step - loss: 0.0622 - hinge_accuracy: 0.9938
+Training set perf:
+500/500 [==============================] - 8s 16ms/step - loss: 0.0557 - hinge_accuracy: 0.9900
+Test set perf:
+500/500 [==============================] - 7s 14ms/step - loss: 0.1031 - hinge_accuracy: 0.9820
+
+Iteration  8
+Built model, going to drop out qubit id  3
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 23s 45ms/step - loss: 0.0525 - hinge_accuracy: 0.9928
+Training set perf:
+500/500 [==============================] - 5s 9ms/step - loss: 0.0474 - hinge_accuracy: 0.9920
+Test set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.0843 - hinge_accuracy: 0.9840
+
+Iteration  9
+Built model, going to drop out qubit id  2
+WARNING:tensorflow:Model failed to serialize as JSON. Ignoring... Layer PQC has arguments in `__init__` and therefore must override `get_config`.
+500/500 [==============================] - 14s 28ms/step - loss: 0.1253 - hinge_accuracy: 0.9645
+Training set perf:
+500/500 [==============================] - 5s 10ms/step - loss: 0.0550 - hinge_accuracy: 0.9880
+Test set perf:
+500/500 [==============================] - 4s 9ms/step - loss: 0.0682 - hinge_accuracy: 0.9880
